@@ -1,8 +1,9 @@
-function Service({ satisfaction, onSatisfaction }) {
+function Service({ satisfaction, onSatisfaction, children }) {
   return (
     <>
       <div>
-        <label htmlFor="optionService">How did you like the service?</label>
+        <label>{children}</label>
+        {/* <label htmlFor="optionService">How did you like the service?</label> */}
         <select
           id="optionService"
           value={satisfaction}

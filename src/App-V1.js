@@ -37,15 +37,14 @@ function App() {
   return (
     <>
       <Bill totalBill={totalBill} onBillChange={handleBillChange} />
-      <Service satisfaction={satisfaction} onSatisfaction={handleSatisfaction}>
-        How did you like the service??
-      </Service>
       <Service
-        satisfaction={satisfaction2}
-        onSatisfaction={handleSatisfaction2}
-      >
-        How did your friend like the service??
-      </Service>
+        satisfaction={satisfaction}
+        onSatisfaction={handleSatisfaction}
+      />
+      <Friend
+        satisfaction2={satisfaction2}
+        onSatisfaction2={handleSatisfaction2}
+      />
       <p>{totalBill === "" ? `` : `You pay ${billWithTips}`}</p>
       <button onClick={handleReset}>Reset</button>
     </>
